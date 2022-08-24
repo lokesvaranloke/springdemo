@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config/>
+	
+	<bean name="addressNY" class = "com.samples.s02Autowiring.model.Address"
+				p:houseNumber="123" p:street="main street" p:city="NY"/>
+				
+	<bean name="addresscal" class = "com.samples.s02Autowiring.model.Address"
+				p:houseNumber="100" p:street="cal street" p:city="CA"/>
+
+	<!--
+	<bean name="emp" class="com.samples.s02Autowiring.model.Employee"
+		p:id="41" p:name="Rahul" autowire="byName"> //if we give byname then initializer i.e. private Address address name should be same as bean name
+	</bean>
+	 for byName the bean name should be like "address"
+	<bean name="emp" class="com.samples.s02Autowiring.model.Employee"
+		p:id="41" p:name="Rahul" autowire="byType">
+	</bean>
+	 -->
+	<bean name="emp" class="com.samples.s02Autowiring.model.Employee"
+		p:id="41" p:name="Rahul">
+	</bean>
+		
+	
+	 
+	
+	
+</beans>
